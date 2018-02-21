@@ -13,7 +13,7 @@ $ helm install stable/ibex-dashboard
 This chart bootstraps an ibex-dashboard deployment on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
 ## Prerequisites
-  - Kubernetes 1.4+ with Beta APIs enabled
+  - Kubernetes 1.7+ with Beta APIs enabled
 
 ## Installing the Chart
 
@@ -41,24 +41,24 @@ The command removes all the Kubernetes components associated with the chart and 
 
 The following tables lists the configurable parameters of the Ibex chart and their default values.
 
-| Parameter                            | Description                                | Default                                                    |
-| -------------------------------      | -------------------------------            | ---------------------------------------------------------- |
-| `image`                              | Ibex image                            | `catalystcode/ibex-dashboard:{VERSION}`                              |
-| `imagePullPolicy`                    | Image pull policy                          | `IfNotPresent`                                             |
-| `serviceType`                        | Kubernetes Service type                    | `LoadBalancer`                                             |
-| `internalPort`                        | Kubernetes Service type                    | `4000`                                             |
-| `externalPort`                        | Kubernetes Service type                    | `80`                                             |
-| `ingress.enabled`                    | Enable ingress controller resource         | `false`                                                    |
-| `ingress.hostname`                   | URL to address your Ibex installation | `ibex.local`                                          |
-| `ingress.tls`                        | Ingress TLS configuration                  | `[]`                                          |
-| `persistence.enabled`                | Enable persistence using PVC               | `true`                                                     |
-| `persistence.storageClass`           | PVC Storage Class                          | `slow` (uses alpha storage class annotation)                |
-| `persistence.accessMode`             | PVC Access Mode                            | `ReadWriteOnce`                                            |
-| `persistence.size`                   | PVC Storage Request                        | `8Gi`                                                     |
-| `persistence.existingClaim`                   | Enable using existing PVC Storage Claim               | `false`                                          |
-| `persistence.existingClassName`                   | Enable using existing PVC Storage ClassName           | `false`                                          |
-| `persistence.storage.provisioner`                   | Storage provisioner                        | `kubernetes.io/azure-disk`                                                     |
-| `persistence.storage.provisioner.parameters`                   | Storage provisioner params                        | `skuName: Standard_LRS,location: eastus`                                                     |
+| Parameter | Description | Default |
+| ----      | ----- | ----- |
+| `image`  | Ibex image  | `catalystcode/ibex-dashboard:{VERSION}`  |
+| `imagePullPolicy`  | Image pull policy  | `IfNotPresent`   |
+| `serviceType`  | Kubernetes Service type   | `LoadBalancer`  |
+| `internalPort` | Kubernetes Service type | `4000` |
+| `externalPort` | Kubernetes Service type | `80` |
+| `ingress.enabled` | Enable ingress controller resource  | `false` |
+| `ingress.hostname` | URL to address your Ibex installation |  |
+| `ingress.tls` | Ingress TLS configuration | `[]` |
+| `persistence.enabled` | Enable persistence using PVC | `true` |
+| `persistence.storageClass` | PVC Storage Class  | `slow` (uses alpha storage class annotation)  |
+| `persistence.accessMode`  | PVC Access Mode | `ReadWriteOnce` |
+| `persistence.size` | PVC Storage Request | `8Gi` |
+| `persistence.existingClaim` | Enable using existing PVC Storage Claim  | `false` |
+| `persistence.existingClassName` | Enable using existing PVC Storage ClassName | `false` |
+| `persistence.storage.provisioner` | Storage provisioner | `kubernetes.io/azure-disk` |
+| `persistence.storage.provisioner.parameters` | Storage provisioner params | `skuName: Standard_LRS,location: eastus` |
 
 ```console
 $ helm install stable/ibex-dashboard --name my-release \

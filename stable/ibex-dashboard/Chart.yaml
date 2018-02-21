@@ -2,12 +2,13 @@ apiVersion: v1
 description: Ibex Dashboard is a dashboarding application that enables building dashboard and templates. It mainly supports Application Insights but data sources and visual components are easily extendable.
 name: ibex-dashboard
 version: 0.1.0
-icon: https://raw.githubusercontent.com/CatalystCode/ibex-dashboard/master/client/public/favicon.ico
+appVersion: 1.3
+icon: https://raw.githubusercontent.com/Azure/ibex-dashboard/master/client/public/favicon.ico
 home: http://aka.ms/ibex
 sources:
-- https://github.com/CatalystCode/ibex-dashboard
+- https://github.com/Azure/ibex-dashboard
 maintainers:
-- name: Mor Shemesh
+- name: mosrsh
   email: morshe@microsoft.com
-- name: Itye Richter
-  email: itye.richter@microsoft.com
+- name: itye-msft
+  email: ityer@microsoft.com
